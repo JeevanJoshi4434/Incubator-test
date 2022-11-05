@@ -10,6 +10,11 @@
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
+.sections{
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
 .eventList{
     display: flex;
     flex-direction: row;

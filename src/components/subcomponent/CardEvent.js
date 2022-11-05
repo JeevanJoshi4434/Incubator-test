@@ -7,6 +7,7 @@ const CardEvent = (props) => {
   const [email, setEmail] = useState('');
     const [Student_ID, setStudent_ID] = useState('');
     const [title, setTitle] = useState('');
+    const [CollageName, setCollageName] = useState('');
   const eventApply = async (e) => {
     e.preventDefault();
     const res = await fetch(`/api/registration`, {
@@ -15,7 +16,7 @@ const CardEvent = (props) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        email,Student_ID,title
+        email,Student_ID,title,CollageName
       })
 
     });
@@ -23,15 +24,13 @@ const CardEvent = (props) => {
         if(json.success && localStorage.getItem('user','jwt')){
           
           // redirect
-          localStorage.setItem('jwt', json.token);
-          localStorage.setItem('user', JSON.stringify(json.user));
-        window.alert("Registration Successfuly");
+        window.alert("Registration Successfully");
           history.push("/");
         }else{
           window.alert("Network Error / User already registered");
         }
   };
-  let { Title,Description, onDate, EventID } = props;
+  let { Title,Description, onDate, EventID,collageName,endDate } = props;
   return (
     <div className='event'>
       
@@ -39,9 +38,10 @@ const CardEvent = (props) => {
         <div className="card-body">
           <h5 className="card-title">{Title}</h5>
           <h6 className="card-subtitle mb-2 text-muted">{onDate}</h6>
-          <h6 className="card-subtitle mb-2 text-muted">Event ID: {EventID}</h6>
+          <h6 className="card-subtitle mb-2 text-muted">Collage: {collageName}</h6>
+          <h6 className="card-subtitle mb-2 text-muted">Event/Course ID: {EventID}</h6>
           <p className="card-text">{Description}</p>
-          <a data-bs-toggle="modal" data-bs-target="#exampleModal3">Enroll Now</a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal3">Enroll Now {endDate}</a>
           {/* <a href="#" className="card-link"></a> */}
         </div>
       </div>
@@ -71,6 +71,11 @@ const CardEvent = (props) => {
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Student Id</label>
                     <input type="text"onChange={(e) => setStudent_ID(e.target.value)}  name="Student_ID"  value={Student_ID} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Collage Name</label>
+                    <input type="text"onChange={(e) => setCollageName(e.target.value)}  name="Student_ID"  value={CollageName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     
                   </div>
 

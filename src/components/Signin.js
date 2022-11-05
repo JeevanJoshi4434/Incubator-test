@@ -25,7 +25,7 @@ const Signin = () => {
           // redirect
           localStorage.setItem('jwt', json.token);
           localStorage.setItem('user', JSON.stringify(json.user));
-        window.alert("Login Successfuly");
+        window.alert("Login Successfully");
           history.push("/");
         }else{
           window.alert("Invalid credentials");

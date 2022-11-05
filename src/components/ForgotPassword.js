@@ -26,10 +26,10 @@ const ForgotPassword = () => {
     if (json.success) {
 
       // redirect
-      localStorage.setItem('jwt', json.token);
-      localStorage.setItem('user', JSON.stringify(json.user));
+      localStorage.removeItem('jwt', json.token);
+      localStorage.removeItem('user', JSON.stringify(json.user));
       window.alert("Successfully Changed the Password");
-      history.push("/");
+      history.push("/login");
     } else {
       window.alert("please enter right credentials / time has expired");
     }

@@ -22,7 +22,7 @@ const ChangePassword = () => {
 
     });
     const json = await res.json()
-    if (json.success && localStorage.getItem('user', 'jwt')) {
+    if (json.success) {
 
       // redirect
       localStorage.setItem('jwt', json.token);

@@ -84,10 +84,10 @@ exports.forgotPassword = syncError(async (req, res, next) => {
     await user.save({ validateBeforeSave: false });
 
 
-    const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}`;
+    const resetPasswordUrl = `${req.protocol}://${req.get("host")}/password/reset/${resetToken}`;
     // const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
 
-    const message = `Your password reset token is:- \n\n ${resetPasswordUrl} \n\n If you've not requested this email than please ignore it`;
+    const message = `Your password reset token for Incubator is:- \n\n ${resetPasswordUrl} \n\n If you've not requested this email than please ignore it`;
 
 
     try {
@@ -257,7 +257,8 @@ exports.getEnroll = syncError(
 
         const EnrolledStudent = await Registration.findOne({ Student_ID: req.body.Student_ID});
         const EnrolledStudents = await Registration.findOne({email:req.body.email});
-        if (!EnrolledStudent && !EnrolledStudents) {
+        const EnrolledStudentID = await Registration.findOne({title:req.body.title});
+        if (!EnrolledStudent && !EnrolledStudents && !EnrolledStudentID) {
             const enroll = await Registration.create({
                 title,
                 email: user.email,

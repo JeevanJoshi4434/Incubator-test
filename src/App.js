@@ -14,6 +14,8 @@ import ResetPassword from './components/ResetPassword';
 import Fetchdata from './components/Fetchdata';
 import Course from './components/Course';
 import AboutUs from './components/AboutUs';
+import MyTeam from './components/MyTeam';
+import Event from './components/Event';
 
 function App() {
   return (
@@ -33,14 +35,23 @@ function App() {
           <Route exact path="/testing" >
             <Fetchdata />
           </Route>
-          <Route exact path="/course-event" >
+          <Route exact path="/courses" >
             <Course />
+          </Route>
+          <Route exact path="/events" >
+            <Event />
           </Route>
           <Route exact path="/forgotpassword" >
             <ResetPassword />
           </Route>
           <Route exact path="/password/reset/:token" >
             <ForgotPassword />
+          </Route>
+          <Route exact path="/yourteam" >
+            <MyTeam />
+          </Route>
+          <Route exact path="/collageteams" >
+            <MyTeam />
           </Route>
           
           <Route exact path="/signup" >

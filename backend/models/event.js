@@ -18,6 +18,10 @@ const eventSchema = new mongoose.Schema({
     Event_ID: {
         type: String,
         require: [true, "Must enter the event's ID"]
+    },
+    CollageName:{
+        type:String,
+        require: true,
     }
 });
 

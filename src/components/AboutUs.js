@@ -20,10 +20,10 @@ const AboutUs = () => {
           <div class="card-body">
             <h5 class="card-title">Prakhar Singh</h5>
             <h6 className="card-subtitle mb-2 text-muted">Founder | Director</h6>
-            <p class="card-text">A very passionate entrepreneur and a driven individual with an aim to crete impact</p>
+            <p class="card-text">A very passionate entrepreneur and a driven individual with an aim to create impact</p>
             {/* <a target="_blank" href="https://www.facebook.com/jeewan.joshi.3133"><img src={fb} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.facebook.com/jeewan.joshi.3133" /></a> */}
             <a target="_blank" href="https://www.instagram.com/prakhar_thakur_315"><img src={instagram} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.instagram.com/prakhar_thakur_315" /></a>
-            <a target="_blank" href="https://www.linkedin.com/in/prakhar-singh-73291b1b"><img src={linkedin} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.linkedin.com/in/jeevan-joshi-5a19a8225/" /></a>
+            <a target="_blank" href="https://www.linkedin.com/in/prakhar-singh-73291b"><img src={linkedin} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.linkedin.com/in/jeevan-joshi-5a19a8225/" /></a>
           </div>
         </div>
       </div>

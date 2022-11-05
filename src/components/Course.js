@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Card from './subcomponent/Card';
+import "./css/admin.css";
+import "./css/AboutUs.css";
 import CardEvent from './subcomponent/CardEvent';
 
 const Course = () => {
-  //collect event data
-  const [data, setData] = useState([]);
+ 
   // collect course data
   const [courseData, setCourseData] = useState([]);
   // fetchCourse 
@@ -26,42 +26,20 @@ const Course = () => {
   useEffect(() => {
     fetchCourse();
   }, []);
-  // fetch Event
-  const fetchEvent = () => {
-    fetch(`/api/events`, {
-      method: 'GET',
-      headers: {
-        "Content-Type": "application/json"
-      },
-    }).then((response) => {
-      return response.json();
-    }).then((data) => {
-      console.log(data)
-      setData(data)
-    })
-  }
-  useEffect(() => {
-    fetchEvent();
-  }, []);
+  
   return (
-    <div>
-      <div className='eventList'>
-        Courses :
-        {courseData.course?.map((i) => {
-          return (
-            <Card className="eventCard" Title={i.title} Description={i.description} />
-          )
-        })}
+    <>
+      <div className='sections'>
+        <div className='profiles'>
+          Courses :
+          {courseData.course?.map((i) => {
+            return (
+              <CardEvent className="eventCard" Title={i.title} Description={i.description} collageName={i.CollageName} EventID={i.Course_ID} endDate={i.toDate} />
+            )
+          })}
+        </div>
       </div>
-      <div className='eventList'>
-        Events:
-        {data.events?.map((event) => {
-          return (
-            <CardEvent className="eventCard" Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event.Event_ID} />
-          )
-        })}
-      </div>
-    </div>
+    </>
   )
 }
 
