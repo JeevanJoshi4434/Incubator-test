@@ -1,0 +1,13 @@
+.profiles{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-device-width: 430px) {
+    .profiles{
+        display: grid;
+        justify-content: center;
+    }
+}

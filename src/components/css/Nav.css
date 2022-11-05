@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.right{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.right > p, .right > h5{
+    margin: 10px 10px;
+}
+.right > h5 {
+    font-size: 16px;
+}
+.left > h5 {
+    font-size: 16px;
+}
+.left > p, .left > h5{
+    margin: 10px 10px;
+}

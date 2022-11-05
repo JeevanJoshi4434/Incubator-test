@@ -1,0 +1,92 @@
+import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
+import userEvent from '@testing-library/user-event';
+const CardEvent = (props) => {
+  const history = useHistory();
+  const [email, setEmail] = useState('');
+    const [Student_ID, setStudent_ID] = useState('');
+    const [title, setTitle] = useState('');
+  const eventApply = async (e) => {
+    e.preventDefault();
+    const res = await fetch(`/api/registration`, {
+      method: 'PUT',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email,Student_ID,title
+      })
+
+    });
+    const json = await res.json()
+        if(json.success && localStorage.getItem('user','jwt')){
+          
+          // redirect
+          localStorage.setItem('jwt', json.token);
+          localStorage.setItem('user', JSON.stringify(json.user));
+        window.alert("Registration Successfuly");
+          history.push("/");
+        }else{
+          window.alert("Network Error / User already registered");
+        }
+  };
+  let { Title,Description, onDate, EventID } = props;
+  return (
+    <div className='event'>
+      
+      <div className="card my-0.5 mx-1" style={{ width: "20rem" }}>
+        <div className="card-body">
+          <h5 className="card-title">{Title}</h5>
+          <h6 className="card-subtitle mb-2 text-muted">{onDate}</h6>
+          <h6 className="card-subtitle mb-2 text-muted">Event ID: {EventID}</h6>
+          <p className="card-text">{Description}</p>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal3">Enroll Now</a>
+          {/* <a href="#" className="card-link"></a> */}
+        </div>
+      </div>
+      <div className='event-modal'>
+        {/* Event modal */}
+        <div className='course-modal'>
+
+          {/* <!-- Modal --> */}
+          <div class="modal fade" id="exampleModal3" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title fs-5" id="exampleModalLabel">{Title}</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Event ID</label>
+                    <input type="text" onChange={(e) => setTitle(e.target.value)} name="name"  value={title} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" onChange={(e) => setEmail(e.target.value)} name="name"  value={email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Student Id</label>
+                    <input type="text"onChange={(e) => setStudent_ID(e.target.value)}  name="Student_ID"  value={Student_ID} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" onClick={eventApply} class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  )
+}
+
+export default CardEvent
