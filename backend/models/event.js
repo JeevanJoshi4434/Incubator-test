@@ -19,7 +19,7 @@ const eventSchema = new mongoose.Schema({
         type: String,
         require: [true, "Must enter the event's ID"]
     },
-    CollageName:{
+    cName:{
         type:String,
         require: true,
     }

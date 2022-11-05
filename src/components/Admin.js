@@ -12,6 +12,7 @@ const Admin = () => {
     const [onDate, setonDate] = useState('');
     const [Event_ID, setID] = useState('');
     const [CollageName, setCollageName] = useState('');
+    const [cName, setcName] = useState('');
     const [data, setData] = useState([]);
     const [courseData, setCourseData] = useState([]);
     const [Course_ID, setCourseID] = useState('');
@@ -35,7 +36,7 @@ const Admin = () => {
                 Description,
                 onDate,
                 Event_ID,
-                CollageName
+                cName
             })
 
         });
@@ -230,6 +231,11 @@ const Admin = () => {
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Exam Date</label>
+                                                <input type="text" onChange={(e) => setcName(e.target.value)} name="name" value={cName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Collage Name</label>
                                                 <input type="text" onChange={(e) => setonDate(e.target.value)} name="name" value={onDate} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
@@ -284,7 +290,7 @@ const Admin = () => {
                     <div className='eventList'>
                         {data.events?.map((event) => {
                             return (
-                                <CardEvent className="eventCard" CollageName={event.collageName} Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event.Event_ID} />
+                                <CardEvent className="eventCard" collageName={event.cName} Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event.Event_ID} />
                             )
                         })}
                     </div>
