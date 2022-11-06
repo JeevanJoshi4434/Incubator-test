@@ -36,16 +36,16 @@ const ForgotPassword = () => {
   };
   return (
     <div className=' forgotPass'>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">New Password</label>
-        <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">New Password</label>
+        <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
       </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Confirm New Password</label>
-        <input type="password" onChange={(e) => setconfirmPassword(e.target.value)} value={confirmPassword} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">Confirm New Password</label>
+        <input type="password" onChange={(e) => setconfirmPassword(e.target.value)} value={confirmPassword} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
       </div>
-      <button type="button" onClick={eventApply} class="btn btn-primary">Save changes</button>
+      <button type="button" onClick={eventApply} className="btn btn-primary">Save changes</button>
     </div>
   )
 }

@@ -18,8 +18,9 @@ const Nav = () => {
       // redirect
       localStorage.removeItem('jwt', json.token);
       localStorage.removeItem('user', JSON.stringify(json.user));
-      window.alert("logout Successfuly");
+      window.alert("logout Successfully");
       history.push("/login");
+      history.go(0);
     } else {
       window.alert("Network Error");
     }

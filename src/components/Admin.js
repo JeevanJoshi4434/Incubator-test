@@ -3,8 +3,10 @@ import './css/admin.css'
 import Card from './subcomponent/Card'
 import CardEvent from './subcomponent/CardEvent'
 import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 const Admin = () => {
+    const history = useHistory();
     const [Title, setTitle] = useState('');
     const [Description, setDescription] = useState('');
     const [title, settitle] = useState('');
@@ -44,6 +46,7 @@ const Admin = () => {
         if (json.success) {
             // redirect
             window.alert("Uploaded Successfully");
+            history.go(0);
         } else {
             window.alert("Only admin is Allowed !");
         }
@@ -70,6 +73,7 @@ const Admin = () => {
         if (json.success) {
             // redirect
             window.alert("Uploaded Successfully");
+            history.go(0);
         } else {
             window.alert("Only admin is Allowed !");
         }
@@ -150,48 +154,48 @@ const Admin = () => {
                             <p data-bs-toggle="modal" data-bs-target="#exampleModal1">Create Course</p>
 
                             {/* <!-- Modal --> */}
-                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create Course</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div className="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Create Course</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Title</label>
-                                                <input type="text" onChange={(e) => settitle(e.target.value)} name="name" value={title} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                        <div className="modal-body">
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">Title</label>
+                                                <input type="text" onChange={(e) => settitle(e.target.value)} name="name" value={title} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">CollageName</label>
-                                                <input type="text" onChange={(e) => setCollageName(e.target.value)} name="name" value={CollageName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">CollageName</label>
+                                                <input type="text" onChange={(e) => setCollageName(e.target.value)} name="name" value={CollageName} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Course ID</label>
-                                                <input type="text" onChange={(e) => setCourseID(e.target.value)} name="name" value={Course_ID} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">Course ID</label>
+                                                <input type="text" onChange={(e) => setCourseID(e.target.value)} name="name" value={Course_ID} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Description</label>
-                                                <input type="text" onChange={(e) => setdescription(e.target.value)} name="name" value={description} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">Description</label>
+                                                <input type="text" onChange={(e) => setdescription(e.target.value)} name="name" value={description} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">From Date:</label>
-                                                <input type="text" onChange={(e) => setfromDate(e.target.value)} name="name" value={fromDate} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">From Date:</label>
+                                                <input type="text" onChange={(e) => setfromDate(e.target.value)} name="name" value={fromDate} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">To Date:</label>
-                                                <input type="text" onChange={(e) => settoDate(e.target.value)} name="name" value={toDate} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">To Date:</label>
+                                                <input type="text" onChange={(e) => settoDate(e.target.value)} name="name" value={toDate} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" onClick={uploadCourse}>Save changes</button>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" className="btn btn-primary" onClick={uploadCourse}>Save changes</button>
                                         </div>
                                     </div>
                                 </div>
@@ -206,43 +210,43 @@ const Admin = () => {
                             <p data-bs-toggle="modal" data-bs-target="#exampleModal2">Create Event</p>
 
                             {/* <!-- Modal --> */}
-                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create Event</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div className="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Create Event</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Title</label>
-                                                <input type="text" onChange={(e) => setTitle(e.target.value)} name="name" value={Title} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                        <div className="modal-body">
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">Title</label>
+                                                <input type="text" onChange={(e) => setTitle(e.target.value)} name="name" value={Title} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Event ID</label>
-                                                <input type="text" onChange={(e) => setID(e.target.value)} name="name" value={Event_ID} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">Event ID</label>
+                                                <input type="text" onChange={(e) => setID(e.target.value)} name="name" value={Event_ID} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Description</label>
-                                                <input type="text" onChange={(e) => setDescription(e.target.value)} name="name" value={Description} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">Description</label>
+                                                <input type="text" onChange={(e) => setDescription(e.target.value)} name="name" value={Description} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Collage Name</label>
-                                                <input type="text" onChange={(e) => setcName(e.target.value)} name="name" value={cName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">Collage Name</label>
+                                                <input type="text" onChange={(e) => setcName(e.target.value)} name="name" value={cName} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">onDate</label>
-                                                <input type="text" onChange={(e) => setonDate(e.target.value)} name="name" value={onDate} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                            <div className="mb-3">
+                                                <label for="exampleInputEmail1" className="form-label">onDate</label>
+                                                <input type="text" onChange={(e) => setonDate(e.target.value)} name="name" value={onDate} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" onClick={uploadEvent} >Save changes</button>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" className="btn btn-primary" onClick={uploadEvent} >Save changes</button>
                                         </div>
                                     </div>
                                 </div>
@@ -252,14 +256,14 @@ const Admin = () => {
 
                     <p data-bs-toggle="modal" data-bs-target="#exampleModaluser">View all users</p>
 
-                    <div class="modal fade" id="exampleModaluser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">All users detail</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div className="modal fade" id="exampleModaluser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h1 className="modal-title fs-5" id="exampleModalLabel">All users detail</h1>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div className="modal-body">
                                 {allUsers.users?.map((i) => {
                                     return(
                                         // //(i)
@@ -268,9 +272,9 @@ const Admin = () => {
                                         </div>
                                 )})}
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" className="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
                         </div>

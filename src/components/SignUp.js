@@ -40,6 +40,7 @@ const SignUp = () => {
           localStorage.setItem('user', JSON.stringify(json.user));
         window.alert("Signup Successfully");
           history.push("/");
+          history.go(0);
         }else{
           window.alert("Invalid credentials");
         }

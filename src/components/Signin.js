@@ -27,6 +27,7 @@ const Signin = () => {
           localStorage.setItem('user', JSON.stringify(json.user));
         window.alert("Login Successfully");
           history.push("/");
+          history.go(0);
         }else{
           window.alert("Invalid credentials");
         }

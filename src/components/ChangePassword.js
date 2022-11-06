@@ -35,20 +35,20 @@ const ChangePassword = () => {
   };
   return (
     <div className='mainChangePassword'>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Old Password</label>
-        <input type="password" onChange={(e) => setoldPassword(e.target.value)} value={oldPassword} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">Old Password</label>
+        <input type="password" onChange={(e) => setoldPassword(e.target.value)} value={oldPassword} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
       </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">New Password</label>
-        <input type="password" onChange={(e) => setnewPassword(e.target.value)} value={newPassword} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">New Password</label>
+        <input type="password" onChange={(e) => setnewPassword(e.target.value)} value={newPassword} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
-      </div><div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Confirm New Password</label>
-        <input type="password" onChange={(e) => setconfirmPassword(e.target.value)} value={confirmPassword} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+      </div><div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">Confirm New Password</label>
+        <input type="password" onChange={(e) => setconfirmPassword(e.target.value)} value={confirmPassword} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
       </div>
-      <button type="button" onClick={eventApply} class="btn btn-primary">Save changes</button>
+      <button type="button" onClick={eventApply} className="btn btn-primary">Save changes</button>
     </div>
   )
 }

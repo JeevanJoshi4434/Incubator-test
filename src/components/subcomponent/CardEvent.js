@@ -25,8 +25,9 @@ const CardEvent = (props) => {
           // redirect
         window.alert("Registration Successfully");
           history.push("/");
+          history.go(0);
         }else{
-          window.alert("Network Error / User already registered");
+          window.alert("User already registered");
         }
   };
   let { Title,Description, onDate, EventID,collageName,endDate } = props;
@@ -49,39 +50,39 @@ const CardEvent = (props) => {
         <div className='course-modal'>
 
           {/* <!-- Modal --> */}
-          <div class="modal fade" id="exampleModal3" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <p class="modal-title fs-5" id="exampleModalLabel">Enrollment form</p>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div className="modal fade" id="exampleModal3" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <p className="modal-title fs-5" id="exampleModalLabel">Enrollment form</p>
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Event ID</label>
-                    <input type="text" onChange={(e) => setTitle(e.target.value)} name="name"  value={title} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                <div className="modal-body">
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Event ID</label>
+                    <input type="text" onChange={(e) => setTitle(e.target.value)} name="name"  value={title} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" onChange={(e) => setEmail(e.target.value)} name="name"  value={email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Email</label>
+                    <input type="email" onChange={(e) => setEmail(e.target.value)} name="name"  value={email} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Student Id</label>
-                    <input type="text"onChange={(e) => setStudent_ID(e.target.value)}  name="Student_ID"  value={Student_ID} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Student Id</label>
+                    <input type="text"onChange={(e) => setStudent_ID(e.target.value)}  name="Student_ID"  value={Student_ID} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Collage Name</label>
-                    <input type="text"onChange={(e) => setCollageName(e.target.value)}  name="Student_ID"  value={CollageName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Collage Name</label>
+                    <input type="text"onChange={(e) => setCollageName(e.target.value)}  name="Student_ID"  value={CollageName} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     
                   </div>
 
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" onClick={eventApply} class="btn btn-primary">Save changes</button>
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" onClick={eventApply} className="btn btn-primary">Save changes</button>
                 </div>
               </div>
             </div>

@@ -34,11 +34,11 @@ const ResetPassword = () => {
   };
   return (
     <div className='forgotPass'>
-        <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Enter your email</label>
-        <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+        <div className="mb-3">
+        <label for="exampleInputEmail1" className="form-label">Enter your email</label>
+        <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
       </div>
-      <button type="button" onClick={eventApply} class="btn btn-primary">Send email</button>
+      <button type="button" onClick={eventApply} className="btn btn-primary">Send email</button>
     </div>
   )
 }
