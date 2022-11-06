@@ -3,15 +3,18 @@ import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 // import './css/signup.css';
+const options = ["Graphic Era Hill University Bhimtal"]
 
 const SignUp = () => {
-    let history = useHistory();    
+    let history = useHistory();
     const [user, setUser] = useState({
-        name: "", email: "", password: "", Collage_name: "", Student_Id: "", role: "user", team: ""
+        name: "", email: "", password: "", Student_Id: "", role: "user", team: ""
     });
-    
+    const [ Collage_name, setSelected] = useState(options[0])
+      
+
     let name, value;
-    
+
     const handleInputs = (e) => {
         console.log(e);
         name = e.target.name;
@@ -19,43 +22,49 @@ const SignUp = () => {
 
         setUser({ ...user, [name]: value });
     }
-    
+
     const postData = async (e) => {
         e.preventDefault();
-        const { name, email, password, Collage_name, Student_Id, role, team } = user;
+        const { name, email, password, Student_Id, role, team } = user;
         const res = await fetch(`/api/register`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name, email, password, Collage_name, Student_Id, role, team
+                name, email, password, Collage_name:Collage_name, Student_Id, role, team
             })
         });
         const json = await res.json()
         // console.log(json);
-        if(json.success){
-          // redirect
-          localStorage.setItem('jwt', json.token);
-          localStorage.setItem('user', JSON.stringify(json.user));
-        window.alert("Signup Successfully");
-          history.push("/");
-          history.go(0);
-        }else{
-          window.alert("Invalid credentials");
+        if (json.success) {
+            // redirect
+            localStorage.setItem('jwt', json.token);
+            localStorage.setItem('user', JSON.stringify(json.user));
+            window.alert("Signup Successfully");
+            history.push("/");
+            history.go(0);
+        } else {
+            window.alert("Invalid credentials");
         }
 
     }
     return (
         <div>
-            <form method='POST'  className='signup-page' onSubmit={postData}>
+            <form method='POST' className='signup-page' onSubmit={postData}>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Name</label>
                     <input name="name" value={user.name} onChange={handleInputs} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Collage Name</label>
-                    <input name="Collage_name" value={user.Collage_name} onChange={handleInputs} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    <select value={ Collage_name} onChange={(e) => setSelected(e.target.value)}>
+                        {options.map((value) => {
+                            return (
+                                <option value={value} key={value}>{value}</option>
+                            )
+                        })}
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Student Id</label>

@@ -2,81 +2,29 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import CardEvent from './subcomponent/CardEvent';
-const Fetchdata = () => {
-    
-    const [data, setData] = useState([]);
-    const fetchEvent = ()=>{
-        fetch(`/api/events`,{
-          method:'GET',
-          headers: {
-              "Content-Type": "application/json"
-            },
-        }).then((response) =>{
-          return response.json();
-        }).then((data)=>{
-          console.log(data)
-          setData(data)
-        })
-      }
-      useEffect(()=>{
-        fetchEvent();
-      },[]);
+const options = ["Graphic Era Hill University Bhimtal","Graphic Era Hill University Haldwani","Graphic Era Deemed to be Dehradun"]
 
-      const user = {
-        "success": true,
-        "events": [
-          {
-            "_id": "63593c178805cbc7ec5cccf4",
-            "Title": "Java Core",
-            "Description": "This is a course of java core",
-            "onDate": "27 March 2022",
-            "toDate": "27 March 2023",
-            "__v": 0
-          },
-          {
-            "_id": "63593c428805cbc7ec5cccf7",
-            "Title": "c++ Core",
-            "Description": "This is a course of C++ core",
-            "onDate": "27 March 2022",
-            "toDate": "27 March 2023",
-            "__v": 0
-          },
-          {
-            "_id": "63593c538805cbc7ec5cccfa",
-            "Title": "c++ Core",
-            "Description": "This is a course of C++ core",
-            "onDate": "27 March 2022",
-            "toDate": "27 March 2023",
-            "__v": 0
-          },
-          {
-            "_id": "63635875179800da945bfaec",
-            "Title": "Paper 1 - GEHU (2022)",
-            "Description": "Hey everyone, participate and increase your growth in coding field. Register Now!",
-            "onDate": "10 November",
-            "Event_ID": "GEHUB01",
-            "__v": 0
-          }
-        ]
-      }
-  
+const Fetchdata = () => {
+
+      const [selected, setSelected] = useState(options[0])
+      
+      const submit = ()=>{
+        console.log(selected);
+      };
   return (
   <>
-    {/* {user.events.map((events)=>(
-        <p>{events.Title}</p>
-    ))} */}
-    <div>
-      Hii
-    </div>
-    {data.events?.map((event)=>{
+   <form>
+    <select value={selected} onChange={(e) => setSelected(e.target.value)}>
+      {options.map((value)=>{
         return(
-        console.log(event.Description)
-        // <p>{event.Title}</p>
-        // <CardEvent Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event.Event_ID} />
+        <option value={value} key={value}>{value}</option>
         )
-})}
+        })}
+    </select>
+    <button type='button' onClick={submit}>Submit</button>
+   </form>
     </>
-  )
+  );
 }
 
 export default Fetchdata
