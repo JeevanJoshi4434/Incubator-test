@@ -34,7 +34,7 @@ const Course = () => {
           Courses :
           {courseData.course?.map((i) => {
             return (
-              <CardEvent className="eventCard" Title={i.title} Description={i.description} collageName={i.CollageName} EventID={i.Course_ID} endDate={i.toDate} />
+              <CardEvent className="eventCard" Title={i._id} Description={i.description} collageName={i.CollageName} EventID={i.Course_ID} endDate={i.toDate} />
             )
           })}
         </div>

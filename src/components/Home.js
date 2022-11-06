@@ -47,7 +47,7 @@ const Home = () => {
                         <div className='cards'>
                             {data.events?.map((event) => {
                                 return (
-                                    <CardEvent className="eventCard" collageName={event.cName} Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event.Event_ID} />
+                                    <CardEvent className="eventCard" collageName={event.cName} Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event._id} />
                                 )
                             })}
                         </div>
