@@ -11,7 +11,9 @@ const {
     getAllUsers,
     updateUserRole,
     deleteUserAdmin,
-    getEnroll
+    getEnroll,
+    createUsersList,
+    createUsersListCourse
 } = require("../controller/userController");
 const {isAuthenticatedUser, authorizeRoles} = require("../Middleware/auth");
 
@@ -36,4 +38,8 @@ router
 .route("/admin/user")
 .get(isAuthenticatedUser,authorizeRoles("admin"),getAllUsers );
 
+router.route("/registrations")
+.put(isAuthenticatedUser,createUsersList);
+
+router.route("/courseregistrations").put(isAuthenticatedUser,createUsersListCourse);
 module.exports = router;

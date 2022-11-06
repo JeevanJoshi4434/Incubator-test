@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
-import userEvent from '@testing-library/user-event';
 const CardEvent = (props) => {
   const history = useHistory();
   const [email, setEmail] = useState('');
@@ -10,7 +9,7 @@ const CardEvent = (props) => {
     const [CollageName, setCollageName] = useState('');
   const eventApply = async (e) => {
     e.preventDefault();
-    const res = await fetch(`/api/registration`, {
+    const res = await fetch(`/api/registrations`, {
       method: 'PUT',
       headers: {
         "Content-Type": "application/json"
@@ -21,7 +20,7 @@ const CardEvent = (props) => {
 
     });
     const json = await res.json()
-        if(json.success && localStorage.getItem('user','jwt')){
+        if(json.success){
           
           // redirect
         window.alert("Registration Successfully");
@@ -54,7 +53,7 @@ const CardEvent = (props) => {
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p class="modal-title fs-5" id="exampleModalLabel">{Title}</p>
+                  <p class="modal-title fs-5" id="exampleModalLabel">Enrollment form</p>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">

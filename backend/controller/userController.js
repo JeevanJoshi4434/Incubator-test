@@ -6,6 +6,8 @@ const sendEmail = require("../utils/sendEmail");
 const crypto = require("crypto");
 const Registration = require("../models/Registration");
 const Event = require("../models/event");
+const cookieParser = require("cookie-parser");
+const Course = require("../models/course");
 
 
 // Register a user
@@ -255,10 +257,8 @@ exports.getEnroll = syncError(
         const event = Event._id;
 
 
-        const EnrolledStudent = await Registration.findOne({ Student_ID: req.body.Student_ID});
-        const EnrolledStudents = await Registration.findOne({email:req.body.email});
-        const EnrolledStudentID = await Registration.findOne({title:req.body.title});
-        if (!EnrolledStudent && !EnrolledStudents && !EnrolledStudentID) {
+        const EnrolledStudent = await Registration.findOne({ Student_ID: req.body.Student_ID, email: req.body.email, title: req.body.title });
+        if (!EnrolledStudent) {
             const enroll = await Registration.create({
                 title,
                 email: user.email,
@@ -282,10 +282,52 @@ exports.getEnroll = syncError(
                 })
             }
         } else {
+
             res.status(400).json({
                 success: false,
-                message: "User Already Exist"
             })
+
         }
     });
+exports.createUsersList = syncError(async (req, res, next) => {
+    const user = await User.findOne({ email: req.body.email });
+    const data = {
+        title:req.body.title,
+        email: user.email,
+        Student_ID: user.Student_Id,
+        Collage_name: user.Collage_name,
+        Student_name: user.name
+    };
+    
+    const enroll = await Event.findById(req.body.title);
 
+        enroll.registrations.push(data)
+        enroll.numofRegistration = enroll.registrations.length
+
+    await enroll.save({ validateBeforeSave: false });
+
+    res.status(200).json({
+        success: true,
+    });
+});
+exports.createUsersListCourse = syncError(async (req, res, next) => {
+    const user = await User.findOne({ email: req.body.email });
+    const data = {
+        title:req.body.title,
+        email: user.email,
+        Student_ID: user.Student_Id,
+        Collage_name: user.Collage_name,
+        Student_name: user.name
+    };
+    
+    const enroll = await Course.findById(req.body.title);
+
+        enroll.registrations.push(data)
+        enroll.numofRegistration = enroll.registrations.length
+
+    await enroll.save({ validateBeforeSave: false });
+
+    res.status(200).json({
+        success: true,
+    });
+});

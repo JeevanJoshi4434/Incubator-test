@@ -22,7 +22,31 @@ const eventSchema = new mongoose.Schema({
     cName:{
         type:String,
         require: true,
-    }
+    },
+    registrations:[
+        {
+            Student_name: {
+                type:String,
+                require:true
+            },
+            Student_ID: {
+                type:String,
+                require:true
+            },
+            Collage_name: {
+                type:String,
+                require:true
+            },
+            title:{
+                type:String,
+                require:true
+            },
+            email:{
+                type:String,
+                require:true
+            }
+        }
+    ]
 });
 
 module.exports = mongoose.model("Event", eventSchema);

@@ -88,7 +88,7 @@ const Admin = () => {
         }).then((response) => {
             return response.json();
         }).then((data) => {
-            // //(data)
+            console.log(data)
             setData(data)
         })
     }
@@ -230,12 +230,12 @@ const Admin = () => {
 
                                             </div>
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Exam Date</label>
+                                                <label for="exampleInputEmail1" class="form-label">Collage Name</label>
                                                 <input type="text" onChange={(e) => setcName(e.target.value)} name="name" value={cName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
                                             <div class="mb-3">
-                                                <label for="exampleInputEmail1" class="form-label">Collage Name</label>
+                                                <label for="exampleInputEmail1" class="form-label">onDate</label>
                                                 <input type="text" onChange={(e) => setonDate(e.target.value)} name="name" value={onDate} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
@@ -283,14 +283,14 @@ const Admin = () => {
                     <div className='eventList'>
                         {courseData.course?.map((i) => {
                             return (
-                                <CardEvent className="eventCard" Title={i.title} Description={i.description} collageName={i.CollageName} EventID={i.Course_ID} endDate={i.toDate} />
+                                <Card className="eventCard" Title={i.title} Description={i.description} collageName={i.CollageName} EventID={i._id} endDate={i.toDate} />
                             )
                         })}
                     </div>
                     <div className='eventList'>
                         {data.events?.map((event) => {
                             return (
-                                <CardEvent className="eventCard" collageName={event.cName} Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event.Event_ID} />
+                                <CardEvent className="eventCard" collageName={event.cName} Title={event.Title} Description={event.Description} onDate={event.onDate} EventID={event._id} />
                             )
                         })}
                     </div>
