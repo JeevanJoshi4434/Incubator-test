@@ -23,7 +23,7 @@ const Signin = () => {
         const json = await res.json()
         if(json.success){
           // redirect
-          localStorage.setItem('jwt', json.token);
+          localStorage.setItem('token', json.token);
           localStorage.setItem('user', JSON.stringify(json.user));
         window.alert("Login Successfully");
           history.push("/");

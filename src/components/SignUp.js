@@ -39,7 +39,7 @@ const SignUp = () => {
         // console.log(json);
         if (json.success) {
             // redirect
-            localStorage.setItem('jwt', json.token);
+            localStorage.setItem('token', json.token);
             localStorage.setItem('user', JSON.stringify(json.user));
             window.alert("Signup Successfully");
             history.push("/");
