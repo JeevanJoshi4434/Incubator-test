@@ -95,7 +95,7 @@ const AboutUs = () => {
       </div>
       <div className=''>
         <div className='d-flex justify-content-center'>
-          <div className=''><h1>Volenteers</h1></div>
+          <div className=''><h1>Volunteers</h1></div>
         </div>
         <div className='members'>
         <div className='member d-flex'>
@@ -104,7 +104,7 @@ const AboutUs = () => {
           </div>
           <div className='mx-1 d-flex justify-content-center flex-column flex-wrap member-details'>
             <h6>Lokesh Singh</h6>
-            <p>Volenteers</p>
+            <p>Volunteers</p>
           </div>
 
         </div>
@@ -114,7 +114,7 @@ const AboutUs = () => {
           </div>
           <div className='mx-1 d-flex justify-content-center flex-column flex-wrap member-details'>
             <h6>Nivedita Bhatt</h6>
-            <p>Volenteers</p>
+            <p>Volunteers</p>
           </div>
 
         </div>
@@ -124,7 +124,7 @@ const AboutUs = () => {
           </div>
           <div className='mx-1 d-flex justify-content-center flex-column flex-wrap member-details'>
             <h6>Diya Rathor</h6>
-            <p>Volenteers</p>
+            <p>Volunteers</p>
           </div>
 
         </div>
@@ -134,7 +134,7 @@ const AboutUs = () => {
           </div>
           <div className='mx-1 d-flex justify-content-center flex-column flex-wrap member-details'>
             <h6>Mitali Pandey</h6>
-            <p>Volenteers</p>
+            <p>Volunteers</p>
           </div>
 
         </div>
@@ -144,7 +144,7 @@ const AboutUs = () => {
           </div>
           <div className='mx-1 d-flex justify-content-center flex-column flex-wrap member-details'>
             <h6>Mokshita Joshi</h6>
-            <p>Volenteers</p>
+            <p>Volunteers</p>
           </div>
           </div>
         </div>
