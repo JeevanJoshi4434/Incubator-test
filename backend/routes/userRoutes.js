@@ -13,13 +13,13 @@ const {
     deleteUserAdmin,
     getEnroll,
     createUsersList,
-    createUsersListCourse
+    createUsersListCourse,
+    createContact
 } = require("../controller/userController");
 const {isAuthenticatedUser, authorizeRoles} = require("../Middleware/auth");
 
 const router = express.Router();
 
-router.route("/registration").put(getEnroll);
 router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
 
@@ -40,6 +40,9 @@ router
 
 router.route("/registrations")
 .put(isAuthenticatedUser,createUsersList);
+
+router.route("/contactus")
+.put(createContact);
 
 router.route("/courseregistrations").put(isAuthenticatedUser,createUsersListCourse);
 module.exports = router;

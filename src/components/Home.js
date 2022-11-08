@@ -11,7 +11,7 @@ const Home = () => {
     
     const [data, setData] = useState([]);
     useEffect(() => {
-        if (!localStorage.getItem('user', 'jwt')) {
+        if (!localStorage.getItem('token')) {
             history.push('/login')
         }
         // eslint-disable-next-line
@@ -38,7 +38,7 @@ const Home = () => {
             <div className='home'>
                 <img className='img1' src={Image1}></img>
                 <h5 className='heading'>Upgrade your skills with</h5>
-                <p className='gradient-text'>Incubator's Competive Events</p>
+                <p className='gradient-text'>Incubator's Competative Events</p>
                 <img className='img2' src={Image2}></img>
                 <div className='home-event'>
                     <div className='title'>

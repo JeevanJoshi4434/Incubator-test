@@ -15,7 +15,7 @@ const CardEvent = (props) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        email,Student_ID,title,CollageName
+        email,title
       })
 
     });

@@ -24,7 +24,8 @@ const Signin = () => {
         if(json.success){
           // redirect
           localStorage.setItem('token', json.token);
-          localStorage.setItem('user', JSON.stringify(json.user));
+          localStorage.setItem('user', json.user)
+          console.log(json.user)
         window.alert("Login Successfully");
           history.push("/");
           history.go(0);

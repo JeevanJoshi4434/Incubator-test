@@ -16,6 +16,7 @@ import Course from './components/Course';
 import AboutUs from './components/AboutUs';
 import MyTeam from './components/MyTeam';
 import Event from './components/Event';
+import ContactUs from './components/subcomponent/ContactUs';
 
 function App() {
   return (
@@ -32,8 +33,11 @@ function App() {
           <Route exact path="/changepassword" >
             <ChangePassword />
           </Route>
-          <Route exact path="/testing" >
+          {/* <Route exact path="/testing" >
             <Fetchdata />
+          </Route> */}
+          <Route exact path="/contact" >
+            <ContactUs />
           </Route>
           <Route exact path="/courses" >
             <Course />

@@ -25,8 +25,6 @@ const ChangePassword = () => {
     if (json.success) {
 
       // redirect
-      localStorage.setItem('jwt', json.token);
-      localStorage.setItem('user', JSON.stringify(json.user));
       window.alert("Successfully Changed the Password");
       history.push("/");
     } else {

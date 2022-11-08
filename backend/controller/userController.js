@@ -8,6 +8,7 @@ const Registration = require("../models/Registration");
 const Event = require("../models/event");
 const cookieParser = require("cookie-parser");
 const Course = require("../models/course");
+const Contact = require("../models/contact");
 
 
 // Register a user
@@ -330,4 +331,19 @@ exports.createUsersListCourse = syncError(async (req, res, next) => {
     res.status(200).json({
         success: true,
     });
+});
+
+exports.createContact = syncError(async (req, res, next) => {
+
+    const data = {
+        email:req.body.email,
+        massage:req.body.massage,
+    }
+    const submit = await Contact.create({
+        email:data.email,massage:data.massage
+    });
+    res.status(201).json({
+        success: true,
+        submit
+    })
 });

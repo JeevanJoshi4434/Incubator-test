@@ -7,7 +7,7 @@ const Footer = () => {
       <div className='footer'>
                 <div className='left'>
                     <Link className='d-flex align-items-center my-2' to="/aboutus"><p>About Us</p></Link>
-                    <p>Contact Us</p>
+                    <p><Link to="/contact">Contact Us</Link></p>
                     <p>Privacy Policy</p>
                 </div>
             </div>
