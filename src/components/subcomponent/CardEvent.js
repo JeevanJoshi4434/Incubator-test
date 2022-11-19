@@ -38,10 +38,11 @@ const CardEvent = (props) => {
         <div className="card-body">
           <h5 className="card-title">{Title}</h5>
           <h6 className="card-subtitle mb-2 text-muted">{onDate}</h6>
-          <h6 className="card-subtitle mb-2 text-muted">Collage: {collageName}</h6>
+          <h6 className="card-subtitle mb-2 text-muted">College: {collageName}</h6>
           <h6 className="card-subtitle mb-2 text-muted">Event/Course ID: {EventID}</h6>
+          <h6 className="card-subtitle mb-2 text-muted">To: {endDate}</h6>
           <p className="card-text">{Description}</p>
-          <a data-bs-toggle="modal" data-bs-target="#exampleModal3">Enroll Now {endDate}</a>
+          <button data-bs-toggle="modal" className='btn btn-primary' data-bs-target="#exampleModal3">Enroll Now</button>
           {/* <a href="#" className="card-link"></a> */}
         </div>
       </div>
@@ -74,7 +75,7 @@ const CardEvent = (props) => {
                     
                   </div>
                   <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Collage Name</label>
+                    <label for="exampleInputEmail1" className="form-label">College Name</label>
                     <input type="text"onChange={(e) => setCollageName(e.target.value)}  name="Student_ID"  value={CollageName} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     
                   </div>

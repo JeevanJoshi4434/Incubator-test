@@ -45,8 +45,8 @@ const Signin = () => {
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} class="form-control" id="exampleInputPassword1"/>
                 </div>
-                <button type="submit" class="btn btn-primary" onClick={loginUser}>SignIn</button>
-                <p>New here ? <Link to='/signup'>Register Now</Link></p> 
+                <button type="submit" class="btn btn-primary" onClick={loginUser}>SIGN IN</button>
+                <p><Link to='/signup'>Register Now</Link></p> 
                  <p><Link to='/forgotpassword'>Forgot Password</Link></p> 
             </form>
         </div>

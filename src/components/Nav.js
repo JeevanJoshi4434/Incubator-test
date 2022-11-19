@@ -43,18 +43,17 @@ const Nav = () => {
                 {/* <Link className="btn btn-primary mx-2 dropdown-item" to="/signup" role="button">Get Started</Link> */}
               </form> :
                 <div className='nav-link d-flex'>
-                  <li><Link className="nav-item mx-1" to="/collageteams">Collage Teams</Link></li>
+                  <li><Link className="nav-item mx-1" to="/collageteams">College Teams</Link></li>
                   <li><Link className="nav-item mx-1" to="/yourteam">Your team</Link></li>
                 </div>
               }
             </div>
             <div className='d-flex '>
-              {!localStorage.getItem('user', 'jwt') ? <form className="d-flex">
+              {!localStorage.getItem('token') ? <form className="d-flex">
                 <Link className="btn btn-primary mx-2 dropdown-item" to="/signup" role="button">Get Started</Link>
               </form> :
                 <div className='nav-link d-flex'>
                   <p className="nav-item mx-2 navLeft" onClick={handleLogout}>Logout</p>
-                  <p><Link className="nav-item" to='/changepassword'>Change Password</Link></p>
                 </div>
               }
             </div>

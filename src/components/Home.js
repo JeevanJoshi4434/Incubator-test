@@ -1,10 +1,11 @@
 import React from 'react'
 import './css/home.css';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Image1 from './images-clipart/background1.png';
 import Image2 from './images-clipart/clipart.png';
 import { useEffect,useState } from 'react';
 import CardEvent from './subcomponent/CardEvent';
+import Footer from './Footer';
 const Home = () => {
 
     let history = useHistory();
@@ -42,7 +43,7 @@ const Home = () => {
                 <img className='img2' src={Image2}></img>
                 <div className='home-event'>
                     <div className='title'>
-                        <p>Participate on <span className='gradient-text'>Events</span></p>
+                        <p>Participate on <Link to="/events"><span className='gradient-text'>Events</span></Link></p>
                         <p>now</p>
                         <div className='cards'>
                             {data.events?.map((event) => {
@@ -54,6 +55,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

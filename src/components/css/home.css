@@ -52,8 +52,18 @@
 }
 .footer{
     display: flex;
+    height: 9vh;
+    background-color: #252525;
+    color: aliceblue;
     flex-direction: row;
     justify-content: space-between;
+}
+.footerbutton {
+    color: aliceblue;
+}
+.footerbutton:hover{
+    color: rgb(218, 218, 218);
+    cursor: pointer;
 }
 .fb{
     width: 30px;

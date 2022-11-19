@@ -41,14 +41,14 @@
 
 @media screen and (max-device-width: 1920px) {
     .navWidth {
-        width: 155vh;
+        width: 170vh;
     }
 
 }
 
 @media screen and (max-device-width: 1470px) {
     .navWidth {
-        width: 132vh;
+        width: 122vh;
     }
 
 }

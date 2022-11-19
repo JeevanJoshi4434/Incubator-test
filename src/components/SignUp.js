@@ -56,7 +56,7 @@ const SignUp = () => {
                     <input name="name" value={user.name} onChange={handleInputs} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Collage Name</label>
+                    <label for="exampleInputEmail1" class="form-label">College Name</label>
                     <select value={ Collage_name} onChange={(e) => setSelected(e.target.value)}>
                         {options.map((value) => {
                             return (
@@ -79,7 +79,7 @@ const SignUp = () => {
                     <input name="password" value={user.password} onChange={handleInputs} type="password" class="form-control" id="exampleInputPassword1" />
                 </div>
                 <button value="register" /*onClick={postData}*/ name="signup" type="submit" class="btn btn-primary">SignUp</button>
-                Already have a account ?<Link to='/login'>Signin</Link>
+                  . Already have an account ? <Link to='/login'>SIGN IN</Link>
             </form>
         </div>
     )

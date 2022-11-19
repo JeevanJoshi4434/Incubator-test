@@ -168,7 +168,7 @@ const Admin = () => {
 
                                             </div>
                                             <div className="mb-3">
-                                                <label for="exampleInputEmail1" className="form-label">CollageName</label>
+                                                <label for="exampleInputEmail1" className="form-label">CollegeName</label>
                                                 <input type="text" onChange={(e) => setCollageName(e.target.value)} name="name" value={CollageName} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
@@ -234,7 +234,7 @@ const Admin = () => {
 
                                             </div>
                                             <div className="mb-3">
-                                                <label for="exampleInputEmail1" className="form-label">Collage Name</label>
+                                                <label for="exampleInputEmail1" className="form-label">College Name</label>
                                                 <input type="text" onChange={(e) => setcName(e.target.value)} name="name" value={cName} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                                             </div>
