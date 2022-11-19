@@ -16,8 +16,7 @@ const Nav = () => {
     const json = await res.json()
     if (json.success) {
       // redirect
-      localStorage.removeItem('jwt', json.token);
-      localStorage.removeItem('user', JSON.stringify(json.user));
+      localStorage.removeItem('token', json.token);
       window.alert("logout Successfully");
       history.push("/login");
       history.go(0);
