@@ -36,8 +36,8 @@ const Nav = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav navWidth">
-              <Link className="nav-link active" aria-current="page" to="/events">Events</Link>
-              <Link className="nav-link active" to="/courses">Course</Link>
+              <Link className="nav-link active  blue" aria-current="page" to="/events">Events</Link>
+              <Link className="nav-link active  blue" to="/courses">Course</Link>
               {!localStorage.getItem('user', 'jwt') ? <form className="d-flex">
                 {/* <Link className="btn btn-primary mx-2 dropdown-item" to="/signup" role="button">Get Started</Link> */}
               </form> :
@@ -52,7 +52,7 @@ const Nav = () => {
                 <Link className="btn btn-primary mx-2 dropdown-item" to="/signup" role="button">Get Started</Link>
               </form> :
                 <div className='nav-link d-flex'>
-                  <p className="nav-item mx-2 navLeft" onClick={handleLogout}>Logout</p>
+                  <p className="nav-item mx-2 navLeft blue" onClick={handleLogout}>Logout</p>
                 </div>
               }
             </div>

@@ -3,6 +3,11 @@
     justify-content: space-between;
 }
 
+.blue:hover{
+    color: rgb(62, 62, 251);
+    cursor: pointer;
+}
+
 .left {
     display: flex;
     /* justify-content: space-around; */
