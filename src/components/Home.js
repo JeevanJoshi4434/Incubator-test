@@ -39,7 +39,7 @@ const Home = () => {
             <div className='home'>
                 <img className='img1' src={Image1}></img>
                 <h5 className='heading'>Upgrade your skills with</h5>
-                <p className='gradient-text'>Incubator's Competative Events</p>
+                <p className='gradient-text'>Incubator's Competitive Events</p>
                 <img className='img2' src={Image2}></img>
                 <div className='home-event'>
                     <div className='title'>

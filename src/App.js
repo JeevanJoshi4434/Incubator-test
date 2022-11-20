@@ -40,7 +40,7 @@ function App() {
             <ContactUs />
           </Route>
           <Route exact path="/courses" >
-            <Course />
+            <MyTeam />
           </Route>
           <Route exact path="/events" >
             <Event />

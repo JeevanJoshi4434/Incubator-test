@@ -31,15 +31,15 @@ const ContactUs = () => {
 return (
     <div className='contact-body'>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control"  onChange={(e) => setEmail(e.target.value)} value={email} id="exampleFormControlInput1" placeholder="name@example.com" />
+            <label for="exampleFormControlInput1" class="form-label contact-item">Email address</label>
+            <input type="email" class="form-control contact-item"  onChange={(e) => setEmail(e.target.value)} value={email} id="exampleFormControlInput1" placeholder="name@example.com" />
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Text area</label>
-            <textarea class="form-control" onChange={(e) => setMassage(e.target.value)} value={massage} id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlTextarea1" class="form-label contact-item">Text area</label>
+            <textarea class="form-control contact-item" onChange={(e) => setMassage(e.target.value)} value={massage} id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div className="modal-footer">
-            <Link to="/"><button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Go to home</button></Link>
+            <Link to="/"><button type="button" className="btn btn-secondary mx-3" data-bs-dismiss="modal">Go to home</button></Link>
             <button type="button" className="btn btn-primary" onClick={ContactUsNow}>Submit</button>
         </div>
     </div>

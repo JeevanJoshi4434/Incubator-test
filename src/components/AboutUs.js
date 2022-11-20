@@ -4,6 +4,7 @@ import Anjali from "./images-clipart/Anjali.jpg";
 import Jeevan from "./images-clipart/Jeevan.jpg";
 import Prakhar from "./images-clipart/prakhar.jpg";
 import sankalp from "./images-clipart/sankalp.jpg";
+import Jasraj from "./images-clipart/jasraaj.jpg";/*  */
 import Vasu from "./images-clipart/Vasu.jpg";
 import fb from "./images-clipart/facebook.png";
 import instagram from "./images-clipart/instagram.png";
@@ -36,26 +37,11 @@ const AboutUs = () => {
         </div>
         <div className='profile mx-3 my-1'>
           <div className="card" style={{ width: "18rem" }}>
-            <img src={Jeevan} className="card-img-top" alt="Jeevan Joshi" />
+            <img src={sankalp} className="card-img-top" alt="Jeevan Joshi" />
             <div className="card-body">
-              <h5 className="card-title">Jeevan Joshi(CTO)</h5>
-              <h6 className="card-subtitle mb-2 text-muted">Full Stack | Java Developer</h6>
-              <p className="card-text">A highly driven individual with a spirit to make a diffrence Jeevan Joshi is the epitome of technical knowledge probably more comfortable in javascript then his mother tongue pun intended</p>
-              <a target="_blank" href="https://www.facebook.com/jeewan.joshi.3133"><img src={fb} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.facebook.com/jeewan.joshi.3133" /></a>
-              <a target="_blank" href="https://www.instagram.com/jeevan_joshi_4434"><img src={instagram} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.instagram.com/jeevan_joshi_4434" /></a>
-              <a target="_blank" href="https://www.linkedin.com/in/jeevan-joshi-5a19a8225"><img src={linkedin} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.linkedin.com/in/jeevan-joshi-5a19a8225/" /></a>
-            </div>
-          </div>
-        </div>
-        <div className='profile mx-3 my-1'>
-          <div className="card" style={{ width: "18rem" }}>
-            <img src={Anjali} className="card-img-top" alt="Anjali Joshi" />
-            <div className="card-body">
-              <h5 className="card-title">Anjali Joshi</h5>
-              <h6 className="card-subtitle mb-2 text-muted">Managing director | Content head</h6>
-              <p className="card-text">Anjali till now has been a major contributor in the content and presentation on things And is keen to the functioning of this venture anjali is the true defination of getting it done.</p>
-              <a target="_blank" href="https://www.instagram.com/anjali_joshi_1402"><img src={instagram} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.instagram.com/anjali_joshi_1402" /></a>
-              <a target="_blank" href="https://www.linkedin.com/in/anjali-joshi-78aa70255"><img src={linkedin} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.linkedin.com/in/anjali-joshi-78aa70255/" /></a>
+              <h5 className="card-title">Sankalp dev</h5>
+              <h6 className="card-subtitle mb-2 text-muted">CEO</h6>
+              <p className="card-text">The CEO has been playing a key role in the public relations. From teachers to students he's been communicating messages undoubtedly and laying down the idea for the company</p>
             </div>
           </div>
         </div>
@@ -74,14 +60,43 @@ const AboutUs = () => {
         </div>
         <div className='profile mx-3 my-1'>
           <div className="card" style={{ width: "18rem" }}>
-            <img src={sankalp} className="card-img-top" alt="Jeevan Joshi" />
+            <img src={Jeevan} className="card-img-top" alt="Jeevan Joshi" />
             <div className="card-body">
-              <h5 className="card-title">Sankalp dev</h5>
-              <h6 className="card-subtitle mb-2 text-muted">CEO</h6>
-              <p className="card-text">The CEO has been playing a key role in the public relations. From teachers to students he's been communicating messages undoubtedly and laying down the idea for the company</p>
+              <h5 className="card-title">Jeevan Joshi(CTO)</h5>
+              <h6 className="card-subtitle mb-2 text-muted">Full Stack | Java Developer</h6>
+              <p className="card-text">A highly driven individual with a spirit to make a diffrence Jeevan Joshi is the epitome of technical knowledge probably more comfortable in javascript then his mother tongue pun intended</p>
+              <a target="_blank" href="https://www.facebook.com/jeewan.joshi.3133"><img src={fb} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.facebook.com/jeewan.joshi.3133" /></a>
+              <a target="_blank" href="https://www.instagram.com/jeevan_joshi_4434"><img src={instagram} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.instagram.com/jeevan_joshi_4434" /></a>
+              <a target="_blank" href="https://www.linkedin.com/in/jeevan-joshi-5a19a8225"><img src={linkedin} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.linkedin.com/in/jeevan-joshi-5a19a8225/" /></a>
             </div>
           </div>
         </div>
+        <div className='profile mx-3 my-1'>
+          <div className="card" style={{ width: "18rem" }}>
+            <img src={Jasraj} className="card-img-top" alt="Jeevan Joshi" />
+            <div className="card-body">
+              <h5 className="card-title">Jasraj Singh</h5>
+              <h6 className="card-subtitle mb-2 text-muted">Managing Director | UI/UX Designer</h6>
+              <p className="card-text">A perfect spirit of designing ideas which allows him to look a deep inside colors</p>
+              {/* <a target="_blank" href="https://www.facebook.com/jeewan.joshi.3133"><img src={fb} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.facebook.com/jeewan.joshi.3133" /></a> */}
+              <a target="_blank" href="https://www.instagram.com/jasraj.7"><img src={instagram} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.instagram.com/jasraj.7" /></a>
+              {/* <a target="_blank" href="https://www.linkedin.com/in/jeevan-joshi-5a19a8225"><img src={linkedin} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.linkedin.com/in/jeevan-joshi-5a19a8225/" /></a> */}
+            </div>
+          </div>
+        </div>
+        <div className='profile mx-3 my-1'>
+          <div className="card" style={{ width: "18rem" }}>
+            <img src={Anjali} className="card-img-top" alt="Anjali Joshi" />
+            <div className="card-body">
+              <h5 className="card-title">Anjali Joshi</h5>
+              <h6 className="card-subtitle mb-2 text-muted">Managing director | Content head</h6>
+              <p className="card-text">Anjali till now has been a major contributor in the content and presentation on things And is keen to the functioning of this venture anjali is the true defination of getting it done.</p>
+              <a target="_blank" href="https://www.instagram.com/anjali_joshi_1402"><img src={instagram} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.instagram.com/anjali_joshi_1402" /></a>
+              <a target="_blank" href="https://www.linkedin.com/in/anjali-joshi-78aa70255"><img src={linkedin} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.linkedin.com/in/anjali-joshi-78aa70255/" /></a>
+            </div>
+          </div>
+        </div>
+        
         <div className='profile mx-3 my-1'>
           <div className="card" style={{ width: "18rem" }}>
             <img src={Animesh} className="card-img-top" alt="Jeevan Joshi" />
@@ -93,7 +108,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className=''>
+      {/* <div className=''>
         <div className='d-flex justify-content-center'>
           <div className=''><h1>Volunteers</h1></div>
         </div>
@@ -148,7 +163,7 @@ const AboutUs = () => {
           </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

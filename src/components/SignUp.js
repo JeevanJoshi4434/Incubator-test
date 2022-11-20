@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 // import './css/signup.css';
-const options = ["Graphic Era Hill University Bhimtal"]
+const options = ["Graphic Era Hill University Bhimtal","Graphic Era Hill University Haldwani","Graphic Era Deemed to be University Dehradun"]
 
 const SignUp = () => {
     let history = useHistory();
