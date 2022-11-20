@@ -51,8 +51,8 @@ const Nav = () => {
               {!localStorage.getItem('token') ? <form className="d-flex">
                 <Link className="btn btn-primary mx-2 dropdown-item" to="/signup" role="button">Get Started</Link>
               </form> :
-                <div className='nav-link d-flex'>
-                  <p className="nav-item mx-2 navLeft blue" onClick={handleLogout}>Logout</p>
+                <div className='nav-link d-flex '>
+                  <p className="nav-item mx-2 my-4 navLeft blue" onClick={handleLogout}>Logout</p>
                 </div>
               }
             </div>
