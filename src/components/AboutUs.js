@@ -27,7 +27,7 @@ const AboutUs = () => {
             <img src={Prakhar} className="card-img-top" alt="Jeevan Joshi" />
             <div className="card-body">
               <h5 className="card-title">Prakhar Singh</h5>
-              <h6 className="card-subtitle mb-2 text-muted">Founder | Director</h6>
+              <h6 className="card-subtitle mb-2 text-muted">Founder</h6>
               <p className="card-text">A very passionate entrepreneur and a driven individual with an aim to create impact</p>
               {/* <a target="_blank" href="https://www.facebook.com/jeewan.joshi.3133"><img src={fb} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.facebook.com/jeewan.joshi.3133" /></a> */}
               <a target="_blank" href="https://www.instagram.com/prakhar_thakur_315"><img src={instagram} className="mx-1" style={{ width: "20px", height: "20px" }} alt="https://www.instagram.com/prakhar_thakur_315" /></a>
@@ -40,8 +40,8 @@ const AboutUs = () => {
             <img src={sankalp} className="card-img-top" alt="Jeevan Joshi" />
             <div className="card-body">
               <h5 className="card-title">Sankalp dev</h5>
-              <h6 className="card-subtitle mb-2 text-muted">CEO</h6>
-              <p className="card-text">The CEO has been playing a key role in the public relations. From teachers to students he's been communicating messages undoubtedly and laying down the idea for the company</p>
+              <h6 className="card-subtitle mb-2 text-muted">Co-Founder</h6>
+              <p className="card-text">The Co-Founder has been playing a key role in the public relations. From teachers to students he's been communicating messages undoubtedly and laying down the idea for the company</p>
             </div>
           </div>
         </div>
@@ -104,6 +104,16 @@ const AboutUs = () => {
               <h5 className="card-title">Animesh Singh</h5>
               <h6 className="card-subtitle mb-2 text-muted">Managing director</h6>
               <p className="card-text">He is a solid foundation to our venture, ensuring that everything is done smoothly and within time limits.Giving us that necessary consistency.</p>
+            </div>
+          </div>
+        </div>
+        <div className='profile mx-3 my-1'>
+          <div className="card" style={{ width: "18rem" }}>
+            <img src={Animesh} className="card-img-top" alt="Jeevan Joshi" />
+            <div className="card-body">
+              <h5 className="card-title">Shivaan Sharma</h5>
+              <h6 className="card-subtitle mb-2 text-muted">Director of Public Relation</h6>
+              <p className="card-text">Be the change you wanna see Incubator to the moon.</p>
             </div>
           </div>
         </div>

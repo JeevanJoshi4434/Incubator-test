@@ -17,6 +17,7 @@ import AboutUs from './components/AboutUs';
 import MyTeam from './components/MyTeam';
 import Event from './components/Event';
 import ContactUs from './components/subcomponent/ContactUs';
+import AdminCell from './components/Admin/AdminCell';
 
 function App() {
   return (
@@ -33,9 +34,9 @@ function App() {
           <Route exact path="/changepassword" >
             <ChangePassword />
           </Route>
-          {/* <Route exact path="/testing" >
-            <Fetchdata />
-          </Route> */}
+          <Route exact path="/testing" >
+            <AdminCell />
+          </Route>
           <Route exact path="/contact" >
             <ContactUs />
           </Route>

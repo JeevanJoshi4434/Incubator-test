@@ -11,7 +11,7 @@
 /build
 
 # misc
-/backend/config/config.env
+# /backend/config/config.env
 /src/setupProxy.js
 .DS_Store
 .env.local
