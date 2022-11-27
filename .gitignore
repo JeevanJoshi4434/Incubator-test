@@ -11,7 +11,9 @@
 /build
 
 # misc
-# /backend/config/config.env
+/backend/config/config.env
+/netlify.toml
+/.netlify
 /src/setupProxy.js
 .DS_Store
 .env.local
