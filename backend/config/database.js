@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const connectdatabase = ()=>{
 
-    mongoose.connect("mongodb+srv://jeevan:incubator%403@cluster0.hs9wuze.mongodb.net/Incubator?retryWrites=true&w=majority",{
+    mongoose.connect(process.env.DB_URI,{
         useNewUrlParser:true,
         useUnifiedTopology:true,
         // useCreateIndex:true,
